@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Le Pas à Pas Vapeur — Ambulateur (1889)</title>
+  <meta name="description" content="Site vitrine victorien pour Le Pas à Pas Vapeur — Ambulateur (1889). Une machine à vapeur pour une marche solennelle." />
+  <!-- Polices victoriens -->
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:wght@400;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-parchment: #f3e9d2;
+      --ink: #2a241b;
+      --gold: #b08d57;
+      --crimson: #7d2b2b;
+      --smoke: rgba(255,255,255,.75);
+    }
+    body {
+      font-family: 'Libre Baskerville', Georgia, serif;
+      color: var(--ink);
+      background: radial-gradient(1200px 800px at 10% 20%, #fff 0%, var(--bg-parchment) 60%, #e7dcc3 100%);
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="table" tableValues="0 0 0 0 0 .02 .05 .08 .1"/></feComponentTransfer></filter><rect width="100%" height="100%" filter="url(%23n)" opacity="0.6"/></svg>');
+      opacity: .25;
+      pointer-events: none;
+      mix-blend-mode: multiply;
+    }
+    .masthead {
+      position: relative;
+      padding: clamp(2rem, 6vw, 5rem) 1.25rem 2rem;
+      text-align: center;
+      border-bottom: 4px double var(--gold);
+      background: linear-gradient(180deg, rgba(176,141,87,.15), transparent);
+    }
+    .brand {
+      font-family: 'IM Fell English', serif;
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      letter-spacing: .5px;
+      color: var(--ink);
+      text-shadow: 0 1px 0 #fff;
+    }
+    .ribbon {
+      display: inline-block;
+      background: var(--crimson);
+      color: #f7f1e8;
+      padding: .25rem .75rem;
+      margin-top: .5rem;
+      font-style: italic;
+      border: 2px solid #3a1212;
+      box-shadow: 0 2px 0 #3a1212;
+    }
+    .nav {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: .75rem 1rem;
+      margin: 0 auto;
+      max-width: 1100px;
+    }
+    .nav a {
+      padding: .5rem .75rem;
+      border: 1px solid var(--gold);
+      background: rgba(255,255,255,.5);
+      transition: transform .15s ease, background .2s ease;
+    }
+    .nav a:hover {
+      transform: translateY(-2px);
+      background: #fff;
+    }
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem;
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: clamp(1rem, 3vw, 2rem);
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+    }
+    .headline {
+      font-family: 'IM Fell English', serif;
+      font-size: clamp(1.8rem, 4.2vw, 3rem);
+      line-height: 1.2;
+      margin: 0 0 .5rem;
+    }
+    .ornate {
+      position: relative;
+      padding: 1.25rem;
+      background: #fffaf0;
+      border: 2px solid var(--gold);
+      box-shadow: inset 0 0 0 4px rgba(176,141,87,.25);
+    }
+    .ornate::before, .ornate::after {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      border: 2px solid var(--gold);
+    }
+    .ornate::before {
+      top: -12px;
+      left: -12px;
+      border-right: none;
+      border-bottom: none;
+    }
+    .ornate::after {
+      bottom: -12px;
+      right: -12px;
+      border-left: none;
+      border-top: none;
+    }
+    section h2 {
+      font-family: 'IM Fell English', serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      margin: 0 0 .75rem;
+      position: relative;
+      display: inline-block;
+    }
+    section h2::after {
+      content: "";
+      display: block;
+      height: 2px;
+      background: var(--gold);
+      margin-top: .4rem;
+      width: 80%;
+    }
+    .v-list {
+      list-style: none;
+      padding: 0;
+      margin: .5rem 0 0;
+    }
+    .v-list li {
+      padding-left: 1.5rem;
+      position: relative;
+      margin: .35rem 0;
+    }
+    .v-list li::before {
+      content: "◆";
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+    }
+    .portraits {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    @media (max-width: 900px) {
+      .portraits {
+        grid-template-columns: 1fr;
+      }
+    }
+    .card {
+      background: #fff;
+      border: 1px solid var(--gold);
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,.05);
+    }
+    .daguerre {
+      aspect-ratio: 4/5;
+      background: linear-gradient(145deg, #f0e8d6, #e3d5b7);
+      border: 6px double var(--gold);
+      position: relative;
+      overflow: hidden;
+      margin: 0 auto 1rem;
+      width: 120px;
+    }
+    .daguerre::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      box-shadow: inset 0 0 80px rgba(0,0,0,.25);
+    }
+    .quote {
+      font-style: italic;
+      background: #fff;
+      border-left: 4px solid var(--gold);
+      padding: .75rem 1rem;
+      margin: 1rem 0;
+    }
+    .timeline {
+      border-left: 3px solid var(--gold);
+      padding-left: 1rem;
+      margin: 1rem 0;
+    }
+    .timeline .item {
+      margin: 1rem 0;
+    }
+    .badge {
+      display: inline-block;
+      background: var(--gold);
+      color: #fff;
+      padding: .1rem .4rem;
+      font-size: .85rem;
+      margin-right: .5rem;
+    }
+    .steam {
+      position: absolute;
+      right: -10px;
+      top: -10px;
+      width: 16px;
+      height: 16px;
+      background: var(--smoke);
+      border-radius: 50%;
+      filter: blur(1px);
+      opacity: .7;
+      animation: puff 3s infinite ease-in;
+    }
+    .steam:nth-child(2) {
+      right: 10px;
+      animation-delay: .8s;
+    }
+    .steam:nth-child(3) {
+      right: 30px;
+      animation-delay: 1.6s;
+    }
+    @keyframes puff {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: .7;
+      }
+      80% {
+        opacity: .05;
+      }
+      100% {
+        transform: translateY(-60px) scale(1.8);
+        opacity: 0;
+      }
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      border-top: 4px double var(--gold);
+      background: rgba(176,141,87,.07);
+    }
+    .btn {
+      display: inline-block;
+      padding: .6rem 1rem;
+      border: 2px solid var(--gold);
+      background: #fff;
+      cursor: pointer;
+      transition: transform .15s ease;
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+    .flex {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      flex-wrap: wrap;
+      margin: 1rem 0;
+    }
+    .hero-image {
+      width: 100%;
+      border: 5px solid var(--gold);
+      box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+    }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+  </style>
+</head>
+<body>
+  <header class="masthead" id="top">
+    <h1 class="brand">Le Pas à Pas Vapeur</h1>
+    <div class="ribbon" aria-label="devise">
+      « La marche mécanique : quand avancer lentement devient un art. » — Archibald T. Piston & Fils.
+    </div>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#invention">L’Invention</a>
+      <a href="#experience">Expérience</a>
+      <a href="#esprits">Les Esprits à Vapeur</a>
+      <a href="#heritage">Héritage</a>
+      <a href="#contact">Commande</a>
+    </nav>
+  </header>
+  <main class="wrap">
+    <!-- HERO -->
+    <section class="hero" aria-label="Présentation">
+      <div>
+        <h2 class="headline">Modèle « Ambulateur » (1889)</h2>
+        <p class="sub">
+          Une évolution « révolutionnaire » du modèle original. Au lieu de pédaler comme sur un vélo elliptique, le pilote marche sur deux grandes palettes mobiles, actionnant ainsi la machine d’un pas majestueux.
+        </p>
+        <div class="ornate" style="margin-top:1rem; position: relative;">
+          <div class="steam" aria-hidden="true"></div>
+          <div class="steam" aria-hidden="true"></div>
+          <div class="steam" aria-hidden="true"></div>
+          <p style="margin:0">
+            <strong>Résultat :</strong> une locomotion encore plus lente, mais infiniment plus solennelle.
+          </p>
+        </div>
+        <div class="flex">
+          <a class="btn" href="#invention">Découvrir l’invention</a>
+          <a class="btn" href="#contact">Commander une démonstration</a>
+        </div>
+      </div>
+      <!-- Illustration de l'Ambulateur -->
+      <figure class="ornate" aria-label="Gravure de l’Ambulateur">
+        ![image](https://mistralaichatupprodswe.blob.core.windows.net/chat-images/assistant/38/88/82/38888268-f75d-4cc5-8f52-ec34e46d1495/c0e3aedb-5e1d-4ddb-bc2f-76817359495f/c205a037-0956-4801-b93e-0d2b672390d9/3686fe03-efdd-4b2c-b833-7966f35c5bd3.jpg?sv=2025-01-05&st=2025-10-16T13%3A58%3A19Z&se=2025-10-16T14%3A58%3A19Z&sr=b&sp=rade&sig=WV%2FBfqVcNwJSR67qlDsyLePgvJdHGXOty6pI%2BA63sc4%3D)
+        <figcaption style="text-align\:center; margin-top:.5rem; font-style\:italic">
+          Gravure d’atelier — Arch. T. Piston & Fils
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- L’INVENTION -->
+    <section id="invention" aria-labelledby="invention-title">
+      <h2 id="invention-title">L’Invention</h2>
+      <div class="ornate">
+        <h3>⚙ Structure revisitée</h3>
+        <ul class="v-list">
+          <li>Châssis en laiton riveté, toujours monté sur quatre petites roues en fonte, mais légèrement allongé pour accueillir le nouveau mécanisme.</li>
+          <li>Deux palettes pédestres articulées à l’avant : le pilote y place ses pieds et avance en marchant, comme sur un tapis roulant inversé.</li>
+          <li>Chaque pas entraîne un balancier en acier qui convertit le mouvement vertical en rotation horizontale, faisant tourner les engrenages.</li>
+        </ul>
+        <h3 style="margin-top:1rem;">🫧 Mécanisme de propulsion</h3>
+        <ul class="v-list">
+          <li>Chaque pas active un piston de la chaudière à vapeur.</li>
+          <li>Les pistons envoient des impulsions régulières dans la transmission, ce qui fait avancer la machine de <strong>15 à 20 cm</strong> par foulée.</li>
+          <li>La vitesse maximale est d’environ <strong>0,5 km/h</strong>, car la vapeur prend son temps pour répondre.</li>
+          <li>Une valve à vapeur synchronisée libère un discret <em>pschhh</em> à chaque pas, comme une respiration mécanique.</li>
+        </ul>
+        <h3 style="margin-top:1rem;">🚩 Détails esthétiques & fonctionnels</h3>
+        <ul class="v-list">
+          <li>Le drapeau mécanique s’agite à gauche puis à droite à chaque foulée, imitant le rythme d’une marche militaire ralentie.</li>
+          <li>Un <strong>compteur de pas victorien</strong> affiche fièrement le nombre de foulées effectuées dans la journée (crémaillère miniature).</li>
+          <li>Une <strong>canne en laiton</strong> peut être fixée à l’avant pour une posture encore plus distinguée.</li>
+          <li>Un sifflet latéral se déclenche automatiquement tous les 100 pas, célébrant la persévérance héroïque de l’utilisateur.</li>
+        </ul>
+        <aside class="quote" aria-label="Conseil du mécène">
+          💡 <em>Conseil du mécène :</em> « Un Ambulateur se juge non à sa vitesse, mais à la noblesse de son souffle. »
+        </aside>
+      </div>
+    </section>
+
+    <!-- EXPÉRIENCE UTILISATEUR -->
+    <section id="experience" aria-labelledby="exp-title">
+      <h2 id="exp-title">Expérience utilisateur</h2>
+      <div class="ornate">
+        <p>
+          Le conducteur, debout sur les palettes, avance lentement en marchant avec grâce. L’appareil donne l’impression que c’est la machine qui marche avec lui, comme une bête mécanique docile. Cela attire les regards admiratifs (et perplexes) des passants.
+        </p>
+        <p class="quote">
+          « On n’avance pas pour arriver quelque part, mais pour être vu en train d’avancer. »
+        </p>
+        <div class="flex">
+          <div class="btn" id="simulateur">Simuler 12 pas (pschhh)</div>
+          <div aria-live="polite" id="compteur" style="min-width:12ch">Pas du jour : 0</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LES ESPRITS À VAPEUR -->
+    <section id="esprits" aria-labelledby="esprits-title">
+      <h2 id="esprits-title">Les Esprits à Vapeur</h2>
+      <div class="portraits">
+        <article class="card" aria-label="Portrait de l’inventeur">
+          <div class="daguerre" role="img" aria-label="Daguerréotype d’Archibald T. Piston"></div>
+          <h3>Archibald T. Piston — <em>L’Inventeur</em></h3>
+          <p>« L’homme qui rêva de transformer chaque pas en œuvre d’art mécanique. »</p>
+        </article>
+        <article class="card" aria-label="Portrait de la mécanicienne">
+          <div class="daguerre" role="img" aria-label="Daguerréotype de Miss Calypso Gearwright"></div>
+          <h3>Miss Calypso Gearwright — <em>La Mécanicienne</em></h3>
+          <p>« De ses mains fines naissent les engrenages les plus précis de la monarchie mécanique. »</p>
+        </article>
+        <article class="card" aria-label="Portrait du mécène">
+          <div class="daguerre" role="img" aria-label="Daguerréotype du Mécène"></div>
+          <h3>Sophie Erwan — <em>Le Mécène</em></h3>
+          <p>« Parce que le progrès sans élégance n’est qu’une vulgarité moderne. »</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- HÉRITAGE IMAGINAIRE -->
+    <section id="heritage" aria-labelledby="heritage-title">
+      <h2 id="heritage-title">Héritage imaginaire</h2>
+      <div class="ornate">
+        <div class="timeline">
+          <div class="item">
+            <span class="badge">1890</span>
+            <p><em>Le Courrier des Curiosités</em> annonce : « Un public conquis par la grâce d’un pas à vapeur. »</p>
+          </div>
+          <div class="item">
+            <span class="badge">1891</span>
+            <p>Fondation des <strong>clubs de promenade lente</strong> ; courses dont l’objectif est de mettre le plus de temps possible à atteindre un banc du parc.</p>
+          </div>
+          <div class="item">
+            <span class="badge">1892</span>
+            <p>Naissance de la <strong>Médaille de Persévérance</strong> : récompense le plus grand nombre de pas pour la plus petite distance parcourue.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMMANDE / CONTACT -->
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Commande & démonstration</h2>
+      <div class="ornate">
+        <p>Intéressé·e par une démonstration publique ou une location pour exposition ? Laissez votre missive :</p>
+        <form class="flex" onsubmit="event.preventDefault(); document.getElementById('merci').hidden=false; this.reset();" aria-label="Form
