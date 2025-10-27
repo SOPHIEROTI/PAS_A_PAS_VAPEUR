@@ -13,38 +13,38 @@
       --gold:#b08d57;
       --crimson:#7d2b2b;
     }
-    body {
-      font-family:'Libre Baskerville',serif;
-      color:var(--ink);
-      background:radial-gradient(1200px 800px at 10% 20%,#fff 0%,var(--bg-parchment) 60%,#e7dcc3 100%);
-      margin:0;padding:0;line-height:1.6;
-    }
-    .masthead{text-align:center;padding:3rem 1rem 2rem;border-bottom:4px double var(--gold);background:linear-gradient(180deg,rgba(176,141,87,.15),transparent);}
-    .brand{font-family:'IM Fell English',serif;font-size:clamp(2.2rem,5vw,3.8rem);}
+    body {font-family:'Libre Baskerville',serif;color:var(--ink);background:radial-gradient(1200px 800px at 10% 20%,#fff 0%,var(--bg-parchment) 60%,#e7dcc3 100%);margin:0;padding:0;line-height:1.6;}
+    .masthead{text-align:center;padding:3rem 1rem 2rem;border-bottom:4px double var(--gold);background:linear-gradient(180deg,rgba(176,141,87,.15),transparent);}    
+    .brand{font-family:'IM Fell English',serif;font-size:clamp(2.2rem,5vw,3.8rem);}    
     .ribbon{display:inline-block;background:var(--crimson);color:#fff;padding:.25rem .75rem;margin-top:.5rem;font-style:italic;border:2px solid #3a1212;}
     .nav{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:1rem;}
-    .nav a{color:var(--ink);border:1px solid var(--gold);padding:.5rem .75rem;text-decoration:none;background:rgba(255,255,255,.5);}
-    .nav a:hover{background:#fff;transform:translateY(-2px);}
+    .nav a{color:var(--ink);border:1px solid var(--gold);padding:.5rem .75rem;text-decoration:none;background:rgba(255,255,255,.5);}    
+    .nav a:hover{background:#fff;transform:translateY(-2px);}    
     .wrap{max-width:1100px;margin:auto;padding:2rem 1rem;}
     .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center;margin-bottom:3rem;}
     @media(max-width:900px){.hero{grid-template-columns:1fr;}}
-    .headline{font-family:'IM Fell English',serif;font-size:clamp(1.8rem,4vw,3rem);}
-    .ornate{background:#fffaf0;border:2px solid var(--gold);padding:1.25rem;box-shadow:inset 0 0 0 4px rgba(176,141,87,.25);}
-    .hero-image{width:100%;border:5px solid var(--gold);box-shadow:5px 5px 10px rgba(0,0,0,.3);}
-    section h2{font-family:'IM Fell English',serif;font-size:clamp(1.6rem,3vw,2.4rem);}
-    .v-list{list-style:none;padding:0;}
-    .v-list li{margin:.35rem 0;padding-left:1.5rem;position:relative;}
-    .v-list li::before{content:"◆";position:absolute;left:0;color:var(--gold);}
-    .portraits{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1rem;}
-    @media(max-width:900px){.portraits{grid-template-columns:1fr;}}
-    .card{background:#fff;border:1px solid var(--gold);padding:1rem;text-align:center;box-shadow:0 8px 20px rgba(0,0,0,.05);}
-    .quote{font-style:italic;background:#fff;border-left:4px solid var(--gold);padding:.75rem 1rem;margin:1rem 0;}
-    .timeline{border-left:3px solid var(--gold);padding-left:1rem;}
-    .timeline .item{margin:1rem 0;}
-    .badge{display:inline-block;background:var(--gold);color:#fff;padding:.1rem .4rem;font-size:.85rem;margin-right:.5rem;}
-    .btn{display:inline-block;padding:.6rem 1rem;border:2px solid var(--gold);background:#fff;cursor:pointer;}
-    .btn:hover{transform:translateY(-2px);}
-    footer{text-align:center;padding:2rem 1rem;border-top:4px double var(--gold);background:rgba(176,141,87,.07);}
+    .headline{font-family:'IM Fell English',serif;font-size:clamp(1.8rem,4vw,3rem);}    
+    .ornate{background:#fffaf0;border:2px solid var(--gold);padding:1.25rem;box-shadow:inset 0 0 0 4px rgba(176,141,87,.25);}    
+    .hero-image{width:100%;border:5px solid var(--gold);box-shadow:5px 5px 10px rgba(0,0,0,.3);}    
+    section h2{font-family:'IM Fell English',serif;font-size:clamp(1.6rem,3vw,2.4rem);}    
+    .v-list{list-style:none;padding:0;}    
+    .v-list li{margin:.35rem 0;padding-left:1.5rem;position:relative;}    
+    .v-list li::before{content:"◆";position:absolute;left:0;color:var(--gold);}    
+    .portraits{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1rem;}    
+    @media(max-width:900px){.portraits{grid-template-columns:1fr;}}    
+    .card{background:#fff;border:1px solid var(--gold);padding:1rem;text-align:center;box-shadow:0 8px 20px rgba(0,0,0,.05);}    
+    .quote{font-style:italic;background:#fff;border-left:4px solid var(--gold);padding:.75rem 1rem;margin:1rem 0;}    
+    .timeline{border-left:3px solid var(--gold);padding-left:1rem;}    
+    .timeline .item{margin:1rem 0;}    
+    .badge{display:inline-block;background:var(--gold);color:#fff;padding:.1rem .4rem;font-size:.85rem;margin-right:.5rem;}    
+    .btn{display:inline-block;padding:.6rem 1rem;border:2px solid var(--gold);background:#fff;cursor:pointer;}    
+    .btn:hover{transform:translateY(-2px);}    
+    footer{text-align:center;padding:2rem 1rem;border-top:4px double var(--gold);background:rgba(176,141,87,.07);}    
+
+    /* --- Nouvelle section Rencontre (mise en page type hero) --- */
+    .meeting{display:grid;grid-template-columns:.9fr 1.1fr;gap:2rem;align-items:center;margin:3rem 0;}
+    .meeting img{width:100%;height:auto;border:5px solid var(--gold);box-shadow:5px 5px 10px rgba(0,0,0,.3);}    
+    @media(max-width:900px){.meeting{grid-template-columns:1fr;}}
   </style>
 </head>
 
@@ -55,6 +55,7 @@
     <nav class="nav">
       <a href="#invention">L’Invention</a>
       <a href="#experience">Expérience</a>
+      <a href="#rencontre">Rencontre 1851</a>
       <a href="#esprits">Les Esprits à Vapeur</a>
       <a href="#heritage">Héritage</a>
       <a href="#contact">Commande</a>
@@ -73,6 +74,22 @@
         <img src="https://i.imgur.com/4MFlPtM.png" alt="Le Pas à Pas Vapeur — Modèle Ambulateur (1889)" class="hero-image">
         <figcaption style="text-align:center;margin-top:.5rem;font-style:italic;">Le Pas à Pas Vapeur — Modèle « Ambulateur » (1889)</figcaption>
       </figure>
+    </section>
+
+    <!-- NOUVELLE SECTION : LA RENCONTRE (1851) -->
+    <section id="rencontre" aria-labelledby="titre-rencontre">
+      <h2 id="titre-rencontre">Notre rencontre — Exposition universelle de Londres, 1851</h2>
+      <div class="meeting">
+        <figure class="ornate">
+          <img src="https://i.imgur.com/NxS4QLG.png" alt="Rencontre au Crystal Palace en 1851 — Miss Agatha, Miss Dorothea et le Professeur" />
+          <figcaption style="text-align:center;margin-top:.5rem;font-style:italic;">Le Crystal Palace, rempli d’engrenages, de bouilloires enthousiastes et d’idées dangereusement brillantes.</figcaption>
+        </figure>
+        <div class="ornate">
+          <p><strong>Tout commença par un <em>pschhh</em> trop confiant.</strong> Sous les arches de verre du Crystal Palace, un nuage de vapeur prit la forme d’un paon, fit une révérence, puis se dissipa en révélant — comme par enchantement — <em>Miss Agatha von Gearhart‑Steamfeldt</em> et son éventail perforé (certifié « aération conceptuelle »), <em>Miss Dorothea Steelborn</em> dont la clé anglaise tintait comme un carillon, et le <em>Professeur Percival Wobblebrains</em>, l’œil brillant, déjà en train de mesurer la longueur idéale d’un soupir mécanique.</p>
+          <p>Nous testâmes une ribambelle d’inventions : la <em>Machine à Applaudissements Automatiques</em> (elle applaudit même les pannes), le <em>Théoriseur à Thé</em> (infuse des hypothèses), et le prototype du <strong>Pas à Pas Vapeur</strong>, qui avançait d’un quart de moustache à la minute — mais avec une dignité telle que même les statues se poussaient pour le laisser passer.</p>
+          <p>Le public, d’abord intrigué, se mit à nous suivre à la vitesse réglementaire : très doucement. Les moustaches frémirent, les engrenages rougirent, et quelqu’un cria « <em>Plus lentement !</em> » — succès absolu. Nous jurâmes alors, la main sur la chaudière tiède, de consacrer nos jours à perfectionner l’art de ne pas se presser en brillant compagnie.</p>
+        </div>
+      </div>
     </section>
 
     <!-- L’INVENTION -->
@@ -107,46 +124,46 @@
       </div>
     </section>
 
-<!-- LES ESPRITS À VAPEUR -->
-<section id="esprits">
-  <h2>Les Esprits à Vapeur</h2>
-  <div class="portraits">
+    <!-- LES ESPRITS À VAPEUR -->
+    <section id="esprits">
+      <h2>Les Esprits à Vapeur</h2>
+      <div class="portraits">
 
-    <!-- Inventeur -->
-    <article class="card">
-      <figure class="ornate">
-        <img src="https://i.imgur.com/k9WYux5.png" alt="Portrait du Professeur Percival Wobblebrains" style="width:100%;height:auto;border:4px double #b08d57;">
-        <figcaption style="text-align:center;margin-top:.5rem;"><em>Professeur Percival Wobblebrains (1903 – ??)</em></figcaption>
-      </figure>
-      <h3>Professeur Percival Wobblebrains — <em>L’Inventeur</em></h3>
-      <p>Inventeur, visionnaire autoproclamé, et catastrophe ambulante.</p>
-    </article>
+        <!-- Inventeur -->
+        <article class="card">
+          <figure class="ornate">
+            <img src="https://i.imgur.com/k9WYux5.png" alt="Portrait du Professeur Percival Wobblebrains" style="width:100%;height:auto;border:4px double #b08d57;">
+            <figcaption style="text-align:center;margin-top:.5rem;"><em>Professeur Percival Wobblebrains (1903 – ??)</em></figcaption>
+          </figure>
+          <h3>Professeur Percival Wobblebrains — <em>L’Inventeur</em></h3>
+          <p>Inventeur, visionnaire autoproclamé, et catastrophe ambulante.</p>
+        </article>
 
-    <!-- Mécanicienne -->
-    <article class="card">
-      <figure class="ornate">
-        <img src="https://i.imgur.com/mTN0CG7.png" alt="Portrait de Miss Dorothea Steelborn, mécanicienne" style="width:100%;height:auto;border:4px double #b08d57;">
-        <figcaption style="text-align:center;margin-top:.5rem;"><em>Miss Dorothea Steelborn — la mécanicienne aux mains noircies de cambouis et au regard malicieux.</em></figcaption>
-      </figure>
-      <h3>Miss Dorothea Steelborn — <em>La Mécanicienne</em></h3>
-      <p>« De ses mains fines naissent les engrenages les plus précis de la monarchie mécanique. »</p>
-    </article>
+        <!-- Mécanicienne -->
+        <article class="card">
+          <figure class="ornate">
+            <img src="https://i.imgur.com/mTN0CG7.png" alt="Portrait de Miss Dorothea Steelborn, mécanicienne" style="width:100%;height:auto;border:4px double #b08d57;">
+            <figcaption style="text-align:center;margin-top:.5rem;"><em>Miss Dorothea Steelborn — la mécanicienne aux mains noircies de cambouis et au regard malicieux.</em></figcaption>
+          </figure>
+          <h3>Miss Dorothea Steelborn — <em>La Mécanicienne</em></h3>
+          <p>« De ses mains fines naissent les engrenages les plus précis de la monarchie mécanique. »</p>
+        </article>
 
-    <!-- Mécène -->
-    <article class="card">
-      <figure class="ornate">
-        <img src="https://i.imgur.com/73pTaaQ.png" alt="Portrait de Miss Agatha von Gearhart-Steamfeldt" style="width:100%;height:auto;border:4px double #b08d57;">
-        <figcaption style="text-align:center;margin-top:.5rem;"><em>Miss Agatha von Gearhart-Steamfeldt et son célèbre éventail perforé.</em></figcaption>
-      </figure>
-      <h3>Miss Agatha von Gearhart-Steamfeldt — <em>La Mécène</em></h3>
-      <p><strong>Industrielle bohème, mécène obstinée et poétesse des machines.</strong></p>
-      <p>Fille d’un fabricant d’armes allemand et d’une pianiste londonienne, Miss Agatha a troqué la poudre à canon pour la vapeur et la mélodie des pistons.</p>
-      <p>Son accessoire emblématique : un éventail en carton percé de trous — « pour une ventilation naturelle et un refroidissement conceptuel ».</p>
-      <blockquote class="quote">“L’important n’est pas que cela fonctionne, mais que cela fonctionne joliment mal.”</blockquote>
-    </article>
+        <!-- Mécène -->
+        <article class="card">
+          <figure class="ornate">
+            <img src="https://i.imgur.com/73pTaaQ.png" alt="Portrait de Miss Agatha von Gearhart-Steamfeldt" style="width:100%;height:auto;border:4px double #b08d57;">
+            <figcaption style="text-align:center;margin-top:.5rem;"><em>Miss Agatha von Gearhart-Steamfeldt et son célèbre éventail perforé.</em></figcaption>
+          </figure>
+          <h3>Miss Agatha von Gearhart-Steamfeldt — <em>La Mécène</em></h3>
+          <p><strong>Industrielle bohème, mécène obstinée et poétesse des machines.</strong></p>
+          <p>Fille d’un fabricant d’armes allemand et d’une pianiste londonienne, Miss Agatha a troqué la poudre à canon pour la vapeur et la mélodie des pistons.</p>
+          <p>Son accessoire emblématique : un éventail en carton percé de trous — « pour une ventilation naturelle et un refroidissement conceptuel ».</p>
+          <blockquote class="quote">“L’important n’est pas que cela fonctionne, mais que cela fonctionne joliment mal.”</blockquote>
+        </article>
 
-  </div>
-</section>
+      </div>
+    </section>
 
     <!-- HERITAGE -->
     <section id="heritage">
@@ -184,18 +201,19 @@
     const btn=document.getElementById('simulateur');
     const compteur=document.getElementById('compteur');
     let pas=0;
-    btn.addEventListener('click',()=>{
-      let i=0;
-      const tick=()=>{
-        if(i>=12)return;
-        pas++;
-        compteur.textContent='Pas du jour : '+pas+' (pschhh)';
-        i++;
-        setTimeout(tick,200);
-      };
-      tick();
-    });
+    if(btn){
+      btn.addEventListener('click',()=>{
+        let i=0;
+        const tick=()=>{
+          if(i>=12)return;
+          pas++;
+          if(compteur) compteur.textContent='Pas du jour : '+pas+' (pschhh)';
+          i++;
+          setTimeout(tick,200);
+        };
+        tick();
+      });
+    }
   </script>
 </body>
 </html>
-
